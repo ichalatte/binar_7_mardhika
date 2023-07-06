@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  margin: 0 0 0 0;
+  padding: 0%;
+  background-color: #9C835F;
+}
+
+/* < */
+
+.back {
+position: absolute;
+width: 55px;
+height: 87px;
+left: 37px;
+top: 0;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 50px;
+line-height: 98px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+text-decoration: none;
+color: #724C21;
+}
+
+/* logo 1 */
+
+.logo {
+position: absolute;
+width: 72px;
+height: 72px;
+left: 6%;
+top: 3%;
+}
+
+/* ROCK PAPER SCISSORS */
+
+.title {
+position: absolute;
+left: 12.5%;
+top: 0%;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 2em;
+text-align: center;
+color: #F9B23D;
+
+}
+
+/* player and com*/
+.player {
+  position: absolute;
+  width: 299px;
+  height: 94px;
+  left: 22%;
+  top: 25%;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color: #000000;
+}
+
+.com {
+  position: absolute;
+  width: 299px;
+  height: 94px;
+  left: 65%;
+  top: 25%;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color: #000000;
+}
+
+/* batu 1 */
+.batu1 {
+  position: absolute;
+  width: 100px;
+  height: 75px;
+  left: 27%;
+  top: 35%;
+}
+
+.batu1:hover, .kertas1:hover, .gunting1:hover {
+  background-color: #c4c4c4;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* batu 2 */
+.batu2 {
+  position: absolute;
+  width:  100px;
+  height: 75px;
+  left: 71%;
+  top: 35%;
+  }
+
+/* kertas 1 */
+.kertas1 {
+  position: absolute;
+  width: 81px;
+  height: 105px;
+  left: 28%;
+  top: 50%;
+  }
+
+/* for VS */
+.text {
+  position: absolute;
+  width: 296px;
+  height: 186px;
+  left: 43%;
+  top: 44%;
+  
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  
+  color: #BD0000;
+}
+
+/* kertas 2 */
+.kertas2 {
+  position: absolute;
+  width: 81px;
+  height: 105px;
+  left: 71%;
+  top: 50%;
+  }
+
+/* gunting 1 */
+.gunting1 {
+  position: absolute;
+  width: 96px;
+  height: 112px;
+  left: 28%;
+  top: 67%;
+  }
+
+/* gunting 2 */
+.gunting2 {
+  position: absolute;
+  width: 96px;
+  height: 112px;
+  left: 71%;
+  top: 67%;
+  }
+
+/*batu gunting kertas hover*/
+
+.batu1 .gunting1 .kertas1 {
+background-color: aliceblue;
+}
+
+/* refresh 2 */
+
+.refresh {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 90%;
+}
+
+.refresh:hover{
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+/* button winner*/
+.winner, .draw {
+position: absolute;
+padding: 15px;
+left: 12%;
+top: 20%;
+background-color: #4C9654;
+border-radius: 10px;
+transform: rotate(-28.87deg);
+margin: auto;
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 38px;
+line-height: 52px;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.draw {
+  background-color: #035B0C;
+  left: 20%;
+}

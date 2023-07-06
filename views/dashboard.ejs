@@ -1,0 +1,81 @@
+<div class="container">
+  <nav class="nav d-flex justify-content-between w-100 py-2">
+    <a class="btn btn-outline-secondary text-decoration-none" href="/?user=admin">
+      <ion-icon name="arrow-back-outline"></ion-icon></a>
+    <a class="btn btn-outline-secondary text-decoration-none" href="/auth/logout">LOG-OUT</a>
+  </nav>
+
+</div>
+<main>
+  <div class="container py-4">
+    <div class="row">
+      <h2 class="text-center">Welcome back, Admin!</h2>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-between">
+          <h3>User Table</h3>
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#addModal">
+            Create
+          </button>
+        </div>
+        <div class="table-responsive">
+          <table
+            class="
+              table table-light table-hover table-striped
+              align-middle
+              bordered
+              my-2
+            "
+          >
+            <thead class="text-center">
+              <tr class="text-center">
+                <th>No.</th>
+                <th>username</th>
+                <th>Password</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(user.length) { %> <% user.map((item, index) => { %>
+              <tr>
+                <th class="text-center"><%= index+1 %></th>
+                <th><%= item.username %></th>
+                <th>*********</th>
+                <th class="text-center">
+                  <a
+                    type="button"
+                    class="btn btn-outline-primary editButton"
+                    data-bs-toggle="modal"
+                    data-bs-target="#updateModal"
+                    data-bs-id="<%= item.id %>"
+                    href="../dashboard/edit/<%= item.id %>"> Update </a>
+                  <a
+                    type="button"
+                    class="btn btn-outline-danger deleteButton"
+                    data-bs-toggle="modal"
+                    data-bs-target="#deleteModal"
+                    data-bs-id="<%= item.id %>"
+                    href="../dashboard/delete/<%= item.id %>">Delete</a>
+                </th>
+              </tr> <% }) %> <% } else { %>
+              <tr>
+                <th class="text-center" colspan="4">Data still empty</th>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include("components/update.ejs"); %> <%- include("components/create.ejs");
+%> <%- include("components/delete.ejs"); %> <%- include("components/alert"); %>
+
+<script src="/scripts/dashboard.js"></script>

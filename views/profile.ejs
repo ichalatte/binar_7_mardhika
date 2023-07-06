@@ -1,0 +1,80 @@
+<div class="container">
+  <nav class="nav d-flex justify-content-between w-100 py-2">
+    <a
+      class="btn btn-outline-primary text-decoration-none"
+      href="/?user=<%= username %>"
+      ><ion-icon name="arrow-back-outline"></ion-icon></a>
+    <a
+      class="btn btn-outline-secondary text-decoration-none"
+      href="/auth/logout"
+      >Logout</a
+    >
+  </nav>
+</div>
+<main>
+  <div class="container py-5">
+    <div class="row">
+      <h2 class="text-center">User Profile</h2>
+      <br>
+      <p class="text-center">Hello, <%= username %></p>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table
+            class=
+            "table table-light table-hover table-striped
+            align-middle
+            bordered
+            my-5"
+          >
+            <thead class="table-outline-primary text-center">
+              <tr>
+                <th>User ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Win</th>
+                <th>Lose</th>
+                <th>Total Score</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(user != "") { %>
+              <tr>
+                <th id="user_id"><%= user.user_id %></th>
+                <th><%= user.full_name %></th>
+                <th><%= user.email %></th>
+                <th class="text-center"><%= history.win %></th>
+                <th class="text-center"><%= history.lose %></th>
+                <th class="text-center"><%= history.score %></th>
+                <th class="text-center">
+                  <a
+                    type="button"
+                    class="btn btn-outline-success editProfileButton"
+                    data-bs-toggle="modal"
+                    data-bs-target="#updateUserModal"
+                    data-bs-id="<%= user.user_id %>"
+                    href="../dashboard/edit/<%= user.user_id %>"
+                  >
+                    Update
+                  </a>
+                </th>
+              </tr>
+              <% } else { %>
+              <tr>
+                <th class="text-center" colspan="4">Data kosong</th>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include("components/update-user.ejs"); %> <%- include("components/alert");
+%>
+
+<script src="/scripts/dashboard.js"></script>

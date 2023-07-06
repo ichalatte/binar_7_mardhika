@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/games.css">
+    <title>Game Rock Paper and Scissors</title>
+</head>
+<body>
+    <a href="/?user=<%= player.username %>" class="back"> < </a>
+    <img src="/assets/images/logo.png" class="logo">
+    <p class="title">Rock Paper Scissors</p>
+    <p class="player" id="uname"><%= player.username %></p>
+    <p class="player" id="playerid"> <%= player.id %></p>
+    <p class="com">COM</p>
+    <img id="rockplayer" src="/assets/images/batu.png" class="batu1" onclick="selectPlayer(0)">
+    <img id="rockcom" src="/assets/images/batu.png" class="batu2">
+    <img id="paperplayer" src="/assets/images/kertas.png" class="kertas1" onclick="selectPlayer(1)">
+    <p id="result" class="text">VS</p>
+    <img id="papercom" src="/assets/images/kertas.png" class="kertas2">
+    <img id="scissorplayer" src="/assets/images/gunting.png" class="gunting1" onclick="selectPlayer(2)">
+    <img id="scissorcom" src="/assets/images/gunting.png" class="gunting2">
+    <img id="refresh" src="/assets/images/refresh.png" class="refresh">
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

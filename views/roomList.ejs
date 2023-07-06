@@ -1,0 +1,46 @@
+<div class="container">
+  <nav class="nav d-flex justify-content-between w-100 py-2">
+    <a class="btn btn-outline-primary text-decoration-none" href="/?user=<%= name %>">
+      <ion-icon name="arrow-back-outline"></ion-icon></a>
+  </nav>
+</div>
+<main>
+  <div class="container py-4">
+    <div class="row text-center">
+      <h3>Room List Table</h3>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="table-responsive">
+          <table
+            class=
+            "table table-light table-hover table-striped
+            align-middle
+            bordered
+            my-5">
+            <thead class="table-outline-primary text-center">
+              <tr>
+                <th>No</th>
+                <th>Room</th>
+                <th>Last Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% if(game.length) { %> <% game.map((item, index) => { %>
+              <tr>
+                <th class="text-center"><%= index+1 %></th>
+                <th><a href="/room/<%= item.room %>"><%= item.room %></a></th>
+                <th class="text-center"><%= item.times %></th>
+              </tr>
+              <% }) %> <% } else { %>
+              <tr>
+                <th class="text-center" colspan="6">Data still empty</th>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

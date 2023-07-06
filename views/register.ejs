@@ -1,0 +1,51 @@
+<div id="login-form" class="d-grid">
+  <div class="card bg-transparent m-auto form-signin">
+    <h1 class="text-center text-white">Register</h1>
+    <p></p>
+    <p class="text-center text-secondary">Tolong register untuk mulai permainan</p>
+    <form class="mt-2" method="post" action="/auth/register">
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control <% if (userExist) { %> is-invalid <% } %>"
+          id="username"
+          name="username"
+          placeholder="username"
+          pattern="[a-z0-9-_\.]+"
+          minlength="4"
+          aria-describedby="nameHelp"
+          required />
+        <label for="username">Username</label>
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Gunakan username lain!!
+        </div>
+      </div>
+      <div id="nameHelp" class="form-text mb-2">
+        Pakai username unik.
+      </div>
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          aria-describedby="passwordHelp"
+          placeholder="Tulis passwordmu disini"
+          minlength="4"
+          required/>
+        <label for="password">Password</label>
+      </div>
+      <div id="passwordHelp" class="form-text mb-2">
+        Pakai password yang mudah diingat
+      </div>
+
+      <div class="py-3 d-flex justify-content-between">
+        <button class="btn btn-lg btn-outline-primary" type="submit">
+          REGISTER
+        </button>
+        <a class="btn btn-lg btn-outline-secondary" href="/login">LOGIN</a>
+      </div>
+      </div>
+    </form>
+  </div>
+</div>
